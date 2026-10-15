@@ -1,39 +1,59 @@
-// Online C++ compiler (editor)
-// Write and run C++ online using this editor.
-
 #include <iostream>
 using namespace std;
+
 int main() {
-    int Makanan,Minuman,TotalMakan=0,TotalMinum=0;
-    cout<<"===MENU MAKANAN==="<<endl;
-    cout<<"1.Soto - Rp 15.000"<<endl;
-    cout<<"2.Rawon - Rp 20.000"<<endl;
-    cout<<"3.Pecel - Rp 10.000"<<endl;
-    cout<<"Pilih Makanan (1/2/3); ";
-    cin>>Makanan;
+    int soto, rawon, pecel;
+    int teh, kopi;
+    int total;
 
-    if (Makanan==1) TotalMakan=15000;
-    else if (Makanan==2) TotalMakan=20000;
-    else if (Makanan==3) TotalMakan=10000;
-    else {
-        cout<<"Pilihan makan salah!"<<endl;  
-    }
-    cout<<"\n==MENU MINUMAN==="<<endl;
-    cout<<"1.Teh - Rp 3.000"<<endl;
-    cout<<"2.Kopi - Rp 5.000"<<endl;
-    cout<<"Pilih Minuman (1/2): ";
-    cin>>Minuman;
+    cout << "=================================" << endl;
+    cout << "          MENU MAKANAN" << endl;
+    cout << "=================================" << endl;
+    cout << "Soto  : Rp15.000" << endl;
+    cout << "Rawon : Rp20.000" << endl;
+    cout << "Pecel : Rp10.000" << endl;
+    cout << "---------------------------------" << endl;
+    cout << "Teh   : Rp3.000" << endl;
+    cout << "Kopi  : Rp5.000" << endl;
+    cout << "=================================" << endl;
 
-    if (Minuman==1) TotalMinum=3000;
-    else if (Minuman==2) TotalMinum=5000;
-    else {
-        cout<<"Pilihan Minuman salah!"<<endl;
-    }
-    int TotalAkhir=TotalMakan+TotalMinum;
-    cout<<"\n___________________"<<endl;
-    cout<<"Total Makan : Rp "<<TotalMakan<<endl;
-    cout<<"Total Minum : Rp "<<TotalMinum<<endl;
-    cout<<"TOTAL BAYAR : Rp "<<TotalAkhir<<endl;
-    
+    cout << "Jumlah Soto  (0 jika tidak beli): ";
+    cin >> soto;
+
+    cout << "Jumlah Rawon (0 jika tidak beli): ";
+    cin >> rawon;
+
+    cout << "Jumlah Pecel (0 jika tidak beli): ";
+    cin >> pecel;
+
+    cout << "Jumlah Teh   (0 jika tidak beli): ";
+    cin >> teh;
+
+    cout << "Jumlah Kopi  (0 jika tidak beli): ";
+    cin >> kopi;
+
+    total = (soto * 15000) +
+            (rawon * 20000) +
+            (pecel * 10000) +
+            (teh * 3000) +
+            (kopi * 5000);
+
+    cout << endl;
+    cout << "=================================" << endl;
+    cout << "          STRUK PEMBELIAN" << endl;
+    cout << "=================================" << endl;
+
+    cout << "Soto  : " << soto << " x Rp15.000" << endl;
+    cout << "Rawon : " << rawon << " x Rp20.000" << endl;
+    cout << "Pecel : " << pecel << " x Rp10.000" << endl;
+    cout << "Teh   : " << teh << " x Rp3.000" << endl;
+    cout << "Kopi  : " << kopi << " x Rp5.000" << endl;
+
+    cout << "---------------------------------" << endl;
+    cout << "Total : Rp" << total << endl;
+    cout << "=================================" << endl;
+
+    system("pause");
+
     return 0;
 }

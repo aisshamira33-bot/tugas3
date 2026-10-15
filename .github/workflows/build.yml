@@ -1,4 +1,4 @@
-name: Build Tugas 2
+name: Build Tugas 3
 
 on:
   push:
@@ -16,10 +16,10 @@ jobs:
 
       - name: Compile C++
         shell: bash
-        run: g++ tugas_2.cpp -o tugas_2.exe -static
+        run: g++ tugas_3.cpp -o tugas_3.exe -static
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
-          name: tugas_2-exe
-          path: tugas_2.exe
+          name: tugas_3-exe
+          path: tugas_3.exe
